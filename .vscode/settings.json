@@ -1,0 +1,6 @@
+{
+  "purescript.outputDirectory": "./bin",
+  "purescript.codegenTargets": [
+    "corefn"
+  ],
+}
