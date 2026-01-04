@@ -1,7 +1,6 @@
 #!chezscheme
 
-(import (chezscheme))
+(import (chezscheme)
+        (io-utilities))
 
-(define (main x)
-  (format #t "Hello, ~s!\n" x)
-  42)
+(define hello (io-proc (x) (format #t "Hello, ~a!\n" x)))

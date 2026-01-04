@@ -1,1 +1,4 @@
+./lib/Prelude.purs
+./lib/Abstract.purs
+./lib/Effect.purs
 ./src/Main.purs

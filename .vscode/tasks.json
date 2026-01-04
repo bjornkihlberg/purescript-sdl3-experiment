@@ -12,16 +12,17 @@
       "group": "build",
       "presentation": {
         "reveal": "always",
+        "clear": true,
       },
       "problemMatcher": [],
     },
     {
-      "label": "run",
+      "label": "_run",
       "type": "shell",
       "command": "scheme",
       "args": [
         "--libdirs",
-        ".:./bin",
+        ".:./bin:./scheme-ffi",
         "--program",
         "app.scm",
       ],
@@ -30,6 +31,9 @@
         "reveal": "always",
       },
       "problemMatcher": [],
-    }
+      "dependsOn": [
+        "build"
+      ]
+    },
   ]
 }
