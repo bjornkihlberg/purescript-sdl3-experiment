@@ -1,0 +1,3 @@
+[submodule "chezscheme-corefn"]
+	path = chezscheme-corefn
+	url = https://github.com/bjornkihlberg/chezscheme-corefn
