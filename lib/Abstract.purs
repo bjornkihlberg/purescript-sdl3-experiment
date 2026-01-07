@@ -2,6 +2,8 @@ module Abstract where
 
 import Data.Functor
 
+import Data.Unit (Unit)
+
 class Apply f <= Applicative f where
   pure :: forall a. a -> f a
 
@@ -14,3 +16,6 @@ class (Applicative m, Bind m) <= Monad m
 
 class Discard a where
   discard :: forall f b. Bind f => f a -> (a -> f b) -> f b
+
+instance Discard Unit where
+  discard ma f = ma >>= f

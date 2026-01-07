@@ -1,4 +1,5 @@
 ./lib/Data/Function.purs
+./lib/Data/Unit.purs
 ./lib/Data/Functor.purs
 ./lib/Prelude.purs
 ./lib/Abstract.purs

@@ -3,4 +3,4 @@
 (import (chezscheme)
         (Main))
 
-(Main.main)
+(format #t "result: ~s\n" (Main.main))

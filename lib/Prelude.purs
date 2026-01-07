@@ -1,10 +1,7 @@
-module Prelude where
+module Prelude
+  ( module Data.Unit
+  , module Data.Functor)
+  where
 
-import Abstract (class Discard, (>>=))
-
-foreign import data Unit :: Type
-
-foreign import unit :: Unit
-
-instance Discard Unit where
-  discard ma f = ma >>= f
+import Data.Functor
+import Data.Unit
