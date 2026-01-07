@@ -35,5 +35,24 @@
         "build"
       ]
     },
+    {
+      "label": "test",
+      "type": "shell",
+      "command": "scheme",
+      "args": [
+        "--libdirs",
+        ".:./bin:./scheme-ffi",
+        "--program",
+        "tests.scm",
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+      },
+      "problemMatcher": [],
+      "dependsOn": [
+        "build"
+      ]
+    },
   ]
 }
