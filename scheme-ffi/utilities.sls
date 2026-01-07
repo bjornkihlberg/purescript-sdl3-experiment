@@ -1,6 +1,6 @@
 #!chezscheme
 
-(library (io-utilities)
+(library (utilities)
   (export io-proc)
 
   (import (chezscheme))

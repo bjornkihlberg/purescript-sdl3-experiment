@@ -1,7 +1,7 @@
 #!chezscheme
 
 (import (chezscheme)
-        (io-utilities))
+        (utilities))
 
 (define ioPure (io-proc (x) x))
 
