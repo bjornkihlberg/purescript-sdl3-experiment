@@ -3,6 +3,11 @@ module Data.Function where
 const :: forall a b. a -> b -> a
 const a _ = a
 
+apply :: forall a b. (a -> b) -> a -> b
+apply f x = f x
+
+infixr 0 apply as $
+
 compose :: forall a b c. (b -> c) -> (a -> b) -> a -> c
 compose f g x = f (g x)
 

@@ -8,4 +8,4 @@ import Effect (IO)
 foreign import add1 :: Int -> Int
 
 main :: IO Unit
-main = pure unit
+main = void $ pure 42
