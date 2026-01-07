@@ -12,3 +12,8 @@ class Functor f <= Apply f where
 
 instance functorFn :: Functor ((->) r) where
   map = compose
+
+foreign import arrayMap :: forall a b. (a -> b) -> Array a -> Array b
+
+instance functorArray :: Functor Array where
+  map = arrayMap

@@ -1,13 +1,10 @@
 module Main (main) where
 
-import Prelude
-import Abstract (discard)
+import Abstract (pure)
+import Data.Functor (map)
 import Effect (IO)
 
-foreign import hello :: String -> IO Unit
+foreign import add1 :: Int -> Int
 
-main :: IO Unit
-main = do
-  hello "huey"
-  hello "dewey"
-  hello "louie"
+main :: IO (Array Int)
+main = pure (map add1 [1, 2, 3])
