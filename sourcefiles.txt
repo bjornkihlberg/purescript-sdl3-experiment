@@ -1,6 +1,8 @@
 ./lib/Data/Function.purs
 ./lib/Data/Unit.purs
 ./lib/Data/Functor.purs
+./lib/Control/Apply.purs
+./lib/Control/Applicative.purs
 ./lib/Prelude.purs
 ./lib/Abstract.purs
 ./lib/Effect.purs

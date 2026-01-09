@@ -1,10 +1,8 @@
 module Abstract where
 
+import Control.Applicative (class Applicative)
 import Control.Apply (class Apply)
 import Data.Unit (Unit)
-
-class Apply f <= Applicative f where
-  pure :: forall a. a -> f a
 
 class Apply m <= Bind m where
   bind :: forall a b. m a -> (a -> m b) -> m b

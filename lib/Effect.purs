@@ -1,6 +1,7 @@
 module Effect where
 
-import Abstract (class Applicative, class Bind, class Monad)
+import Abstract (class Bind, class Monad)
+import Control.Applicative (class Applicative)
 import Control.Apply (class Apply)
 import Data.Functor (class Functor)
 
