@@ -4,7 +4,7 @@
 ./lib/Control/Apply.purs
 ./lib/Control/Applicative.purs
 ./lib/Control/Bind.purs
+./lib/Control/Monad.purs
 ./lib/Prelude.purs
-./lib/Abstract.purs
 ./lib/Effect.purs
 ./src/Main.purs
