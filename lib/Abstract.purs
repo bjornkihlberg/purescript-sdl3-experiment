@@ -1,7 +1,6 @@
 module Abstract where
 
-import Data.Functor
-
+import Control.Apply (class Apply)
 import Data.Unit (Unit)
 
 class Apply f <= Applicative f where

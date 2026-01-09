@@ -16,3 +16,6 @@ composeFlipped g f x = f (g x)
 
 infixr 9 compose as <<<
 infixr 9 composeFlipped as >>>
+
+id :: forall a. a -> a
+id x = x

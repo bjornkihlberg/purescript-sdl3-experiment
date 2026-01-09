@@ -8,15 +8,12 @@ class Functor f where
 
 infixl 4 map as <$>
 
-class Functor f <= Apply f where
-  apply :: forall a b. f (a -> b) -> f a -> f b
-
-instance functorFn :: Functor ((->) r) where
+instance Functor ((->) r) where
   map = compose
 
 foreign import arrayMap :: forall a b. (a -> b) -> Array a -> Array b
 
-instance functorArray :: Functor Array where
+instance Functor Array where
   map = arrayMap
 
 void :: forall f a. Functor f => f a -> f Unit
