@@ -3,6 +3,7 @@
 ./lib/Data/Functor.purs
 ./lib/Control/Apply.purs
 ./lib/Control/Applicative.purs
+./lib/Control/Bind.purs
 ./lib/Prelude.purs
 ./lib/Abstract.purs
 ./lib/Effect.purs

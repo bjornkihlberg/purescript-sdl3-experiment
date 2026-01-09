@@ -14,6 +14,9 @@ compose f g x = f (g x)
 composeFlipped :: forall a b c. (a -> b) -> (b -> c) -> a -> c
 composeFlipped g f x = f (g x)
 
+flip :: forall a b c. (a -> b -> c) -> b -> a -> c
+flip f y x = f x y
+
 infixr 9 compose as <<<
 infixr 9 composeFlipped as >>>
 

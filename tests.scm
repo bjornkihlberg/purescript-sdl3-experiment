@@ -4,7 +4,8 @@
 
 (define test-suite
   (list "Data.Function.spec.scm"
-        "Data.Unit.spec.scm"))
+        "Data.Unit.spec.scm"
+        "Control.Bind.spec.scm"))
 
 (guard (e [(warning? e)
             (display "\x1b;[33m")

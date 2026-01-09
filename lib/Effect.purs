@@ -1,8 +1,9 @@
 module Effect where
 
-import Abstract (class Bind, class Monad)
+import Abstract (class Monad)
 import Control.Applicative (class Applicative)
 import Control.Apply (class Apply)
+import Control.Bind (class Bind)
 import Data.Functor (class Functor)
 
 foreign import data IO :: Type -> Type
