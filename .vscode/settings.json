@@ -3,4 +3,5 @@
   "purescript.codegenTargets": [
     "corefn"
   ],
+  "purescript.exportsCodeLens": false
 }
