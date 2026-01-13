@@ -13,5 +13,5 @@ import Control.Apply
 import Control.Applicative
 import Control.Bind
 import Control.Monad
-import Data.Function (const, ($))
+import Data.Function (const, ($), (<<<), (>>>))
 import Data.Unit (Unit, unit)
