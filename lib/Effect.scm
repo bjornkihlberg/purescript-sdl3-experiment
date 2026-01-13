@@ -1,12 +1,16 @@
 #!chezscheme
 
-(import (chezscheme)
+(import (except (chezscheme) apply map)
         (utilities))
 
-(define ioPure (io-proc (x) x))
+(define (unsafeCastIO x) x)
 
-(define ioApply (io-proc (mf ma) ((mf) (ma))))
+(define pure (io-proc (x) x))
 
-(define ioMap (io-proc (f ma) (f (ma))))
+(define apply (io-proc (mf ma) ((mf) (ma))))
 
-(define ioBind (io-proc (ma f) ((f (ma)))))
+(define map (io-proc (f ma) (f (ma))))
+
+(define bind (io-proc (ma f) ((f (ma)))))
+
+(define discard bind)
