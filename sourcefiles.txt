@@ -1,3 +1,5 @@
+./lib/SDL3/Effect.purs
+./lib/SDL3/Init.purs
 ./lib/Data/Function.purs
 ./lib/Data/Unit.purs
 ./lib/Data/Functor.purs
