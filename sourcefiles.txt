@@ -1,5 +1,5 @@
-./lib/SDL3/Effect.purs
-./lib/SDL3/Init.purs
+./lib/Foreign/Ptr.purs
+./lib/Debug/Trace.purs
 ./lib/Data/Function.purs
 ./lib/Data/Unit.purs
 ./lib/Data/Functor.purs
@@ -7,6 +7,10 @@
 ./lib/Control/Applicative.purs
 ./lib/Control/Bind.purs
 ./lib/Control/Monad.purs
+./lib/Data/Maybe.purs
 ./lib/Prelude.purs
 ./lib/Effect.purs
+./lib/SDL3/Effect.purs
+./lib/SDL3/Video.purs
+./lib/SDL3/Init.purs
 ./src/Main.purs
