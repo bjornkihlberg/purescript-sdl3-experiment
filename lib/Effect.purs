@@ -3,26 +3,24 @@ module Effect where
 data Effect :: Type
 data Effect
 
-foreign import data IO :: Row Effect -> Row Effect -> Type -> Type
+foreign import data IO :: Row Effect -> Type -> Type
 
-type role IO nominal nominal representational
+type role IO nominal representational
 
-type IO1 e a = IO e e a
-
-foreign import unsafeCastIO :: forall (e0 :: Row Effect) (e1 :: Row Effect) (e2 :: Row Effect) (e3 :: Row Effect) a.
-  IO e0 e1 a -> IO e2 e3 a
+foreign import unsafeCastIO :: forall (e0 :: Row Effect) (e1 :: Row Effect) a.
+  IO e0 a -> IO e1 a
 
 foreign import pure :: forall a (e :: Row Effect).
-  a -> IO e e a
+  a -> IO e a
 
-foreign import apply :: forall a b (e0 :: Row Effect) (e1 :: Row Effect) (e2 :: Row Effect).
-  IO e0 e1 (a -> b) -> IO e1 e2 a -> IO e0 e2 b
+foreign import apply :: forall a b (e :: Row Effect).
+  IO e (a -> b) -> IO e a -> IO e b
 
 foreign import map :: forall a b (e :: Row Effect).
-  (a -> b) -> IO e e a -> IO e e b
+  (a -> b) -> IO e a -> IO e b
 
-foreign import bind :: forall a b (e0 :: Row Effect) (e1 :: Row Effect) (e2 :: Row Effect).
-  IO e0 e1 a -> (a -> IO e1 e2 b) -> IO e0 e2 b
+foreign import bind :: forall a b (e :: Row Effect).
+  IO e a -> (a -> IO e b) -> IO e b
 
-foreign import discard :: forall a b (e0 :: Row Effect) (e1 :: Row Effect) (e2 :: Row Effect).
-  IO e0 e1 a -> (a -> IO e1 e2 b) -> IO e0 e2 b
+foreign import discard :: forall a b (e :: Row Effect).
+  IO e a -> (a -> IO e b) -> IO e b
